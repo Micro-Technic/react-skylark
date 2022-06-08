@@ -1,5 +1,8 @@
 {
-  "name": "react-skylark",
+  "name": "@mt-simon/react-skylark",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "version": "1.0.0",
   "description": "React components for Skylark IOT products",
   "main": "dist/cjs/index.js",
@@ -33,5 +36,9 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Micro-Technic/react-skylark.git"
+  }
 }
