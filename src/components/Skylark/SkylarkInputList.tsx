@@ -11,7 +11,6 @@ import {
   Td,
   TableContainer,
 } from "@chakra-ui/react";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 interface SkylarkInputListProps {
   columns: Array<{

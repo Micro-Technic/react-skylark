@@ -5,7 +5,7 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { ChakraProvider } from "@chakra-ui/react";
 import { SkylarkCards } from "../components/Skylark";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 export default {
   /* 👇 The title prop is optional.
    * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading

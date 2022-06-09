@@ -19,7 +19,6 @@ export interface SkylarkCardsProps {
   }>;
   children?: React.ReactNode;
 }
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const SkylarkCards: React.FC<SkylarkCardsProps> = (props) => {
   return (
