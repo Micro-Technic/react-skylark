@@ -3,11 +3,11 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "React components for Skylark IOT products",
   "main": "dist/cjs/index.js",
   "scripts": {
-    "rollup": "rollup -c",
+    "rollup": "rollup -c && tsc",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
