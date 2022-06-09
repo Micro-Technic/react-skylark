@@ -10,7 +10,7 @@ import {
   AccordionIcon,
 } from "@chakra-ui/react";
 
-interface SkylarkCardsProps {
+export interface SkylarkCardsProps {
   title: string;
   cards: Array<{
     header: string;
@@ -19,6 +19,7 @@ interface SkylarkCardsProps {
   }>;
   children?: React.ReactNode;
 }
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const SkylarkCards: React.FC<SkylarkCardsProps> = (props) => {
   return (

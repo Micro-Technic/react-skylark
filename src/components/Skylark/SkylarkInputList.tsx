@@ -11,6 +11,7 @@ import {
   Td,
   TableContainer,
 } from "@chakra-ui/react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 interface SkylarkInputListProps {
   columns: Array<{
@@ -23,7 +24,7 @@ interface SkylarkInputListProps {
   children?: React.ReactNode;
 }
 
-const SkylarkInputList: React.FC<SkylarkInputListProps> = (props) => {
+export const SkylarkInputList: React.FC<SkylarkInputListProps> = (props) => {
   return (
     <Box>
       <TableContainer>
