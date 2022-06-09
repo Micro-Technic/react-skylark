@@ -20,7 +20,7 @@ jobs:
           echo branch `git branch --show-current`;
           echo node `node -v`;
       - name: Install dependencies
-        run: npm ci
+        run: npm install --include=dev
       - name: Run Build
         run: npm run rollup
       - name: Publish if version has been updated
