@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "version": "1.0.30",
+  "version": "1.0.31",
   "description": "React components for Skylark IOT products",
   "main": "dist/cjs/index.js",
   "scripts": {
@@ -52,7 +52,9 @@
     "framer-motion": "^4.1.17",
     "react": "^18.1.0",
     "react-bootstrap": "^2.3.1",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1"
   },
   "module": "dist/esm/index.js",
   "files": [
