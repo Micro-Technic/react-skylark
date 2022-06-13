@@ -12,7 +12,7 @@ import {
   TableContainer,
 } from "@chakra-ui/react";
 
-interface SkylarkInputListProps {
+export interface SkylarkInputListProps {
   columns: Array<{
     tableColumnHeaderTitle: String;
     tableColumnHeaderProps?: TableColumnHeaderProps;
