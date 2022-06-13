@@ -19,8 +19,8 @@ jobs:
         run: |
           echo branch `git branch --show-current`;
           echo node `node -v`;
-      - name: Install dependencies
-        run: npm install
+      - name: Install
+        run: npm ci
       - name: Run Build
         run: npm run rollup
       - name: Publish if version has been updated
