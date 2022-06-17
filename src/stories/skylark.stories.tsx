@@ -4,7 +4,7 @@ import React from "react";
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { ChakraProvider } from "@chakra-ui/react";
-import { SkylarkCards } from "../components/Skylark";
+import { SkylarkCards, SkylarkInputList } from "../components/Skylark";
 import "bootstrap/dist/css/bootstrap.min.css";
 export default {
   /* 👇 The title prop is optional.
@@ -15,21 +15,64 @@ export default {
   component: SkylarkCards,
 } as ComponentMeta<typeof SkylarkCards>;
 
+const List1 = () => {
+  return (
+    <SkylarkInputList
+      columns={[
+        { tableColumnHeaderTitle: "Column 1 title" },
+        { tableColumnHeaderTitle: "Column 2 title" },
+        { tableColumnHeaderTitle: "Column 3 title" },
+        { tableColumnHeaderTitle: "Column 4 title" },
+      ]}
+      rows={[
+        {
+          data: [
+            { Cell: <div>Cell data 1</div>, cellProps: { textColor: "red" } },
+            { Cell: <div>Cell data 2</div>, cellProps: { textColor: "pink" } },
+            { Cell: <div>Cell data 3</div>, cellProps: { textColor: "black" } },
+            { Cell: <div>Cell data 4</div>, cellProps: { textColor: "green" } },
+          ],
+        },
+      ]}
+    />
+  );
+};
+
+const List2 = () => {
+  return (
+    <SkylarkInputList
+      columns={[
+        { tableColumnHeaderTitle: "Column 1 title" },
+        { tableColumnHeaderTitle: "Column 2 title" },
+        { tableColumnHeaderTitle: "Column 3 title" },
+        { tableColumnHeaderTitle: "Column 4 title" },
+      ]}
+      rows={[
+        {
+          data: [
+            { Cell: <div>Cell data 1</div>, cellProps: { textColor: "red" } },
+            { Cell: <div>Cell data 2</div>, cellProps: { textColor: "pink" } },
+            { Cell: <div>Cell data 3</div>, cellProps: { textColor: "black" } },
+            { Cell: <div>Cell data 4</div>, cellProps: { textColor: "green" } },
+          ],
+        },
+      ]}
+    />
+  );
+};
+
 export const SkylarkCard: ComponentStory<typeof SkylarkCards> = () => {
   let cards: Array<{
     header: string;
-    title: string;
     body: JSX.Element;
   }> = [
     {
-      header: "Setup",
-      title: "Setup",
-      body: <div> Setup BODY </div>,
+      header: "Card 1",
+      body: <List1 />,
     },
     {
-      header: "Log",
-      title: "Log",
-      body: <div> LOG BODY </div>,
+      header: "Card 2",
+      body: <List2 />,
     },
   ];
   let cardProps = {

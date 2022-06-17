@@ -14,7 +14,6 @@ export interface SkylarkCardsProps {
   title: string;
   cards: Array<{
     header: string;
-    title: string;
     body: JSX.Element;
   }>;
   children?: React.ReactNode;
@@ -67,7 +66,7 @@ const SkylarkCards: React.FC<SkylarkCardsProps> = (props) => {
         })}
         {props.children}
         <Flex mt={"1rem"} justifyContent={"center"}>
-          Copyright © 2022 Micro Technic
+          Copyright © {new Date().getFullYear()} Micro Technic
         </Flex>
       </Flex>
     </div>
