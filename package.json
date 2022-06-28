@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "version": "1.0.33",
+  "version": "1.0.34",
   "description": "React components for Skylark IOT products",
   "main": "dist/cjs/index.js",
   "scripts": {
