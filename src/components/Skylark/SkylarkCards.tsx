@@ -8,6 +8,7 @@ import {
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
+  AccordionProps,
 } from "@chakra-ui/react";
 
 export interface SkylarkCardsProps {
@@ -15,6 +16,7 @@ export interface SkylarkCardsProps {
   cards: Array<{
     header: string;
     body: JSX.Element;
+    accordionProps?: AccordionProps;
   }>;
   children?: React.ReactNode;
 }
@@ -32,8 +34,10 @@ const SkylarkCards: React.FC<SkylarkCardsProps> = (props) => {
               style={{ borderStyle: "none" }}
             >
               <Accordion
-                allowMultiple
+                allowMultiple={true}
+                allowToggle={true}
                 style={{ borderStyle: "none", borderWidth: 0 }}
+                {...val?.accordionProps}
               >
                 <AccordionItem style={{ borderStyle: "none", borderWidth: 0 }}>
                   <Card>

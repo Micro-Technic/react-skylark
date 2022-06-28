@@ -3,9 +3,10 @@
 import React from "react";
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { ChakraProvider } from "@chakra-ui/react";
+import { AccordionProps, ChakraProvider } from "@chakra-ui/react";
 import { SkylarkCards, SkylarkInputList } from "../components/Skylark";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { SkylarkCardsProps } from "../components/Skylark/SkylarkCards";
 export default {
   /* 👇 The title prop is optional.
    * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
@@ -65,17 +66,19 @@ export const SkylarkCard: ComponentStory<typeof SkylarkCards> = () => {
   let cards: Array<{
     header: string;
     body: JSX.Element;
+    accordionProps?: AccordionProps;
   }> = [
     {
       header: "Card 1",
       body: <List1 />,
+      accordionProps: { defaultIndex: 0, allowToggle: true },
     },
     {
       header: "Card 2",
       body: <List2 />,
     },
   ];
-  let cardProps = {
+  let cardProps: SkylarkCardsProps = {
     cards: cards,
     title: "Application title",
   };
